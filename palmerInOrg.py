@@ -3,11 +3,12 @@ import numpy as np
 import os
 from mpl_toolkits.basemap import Basemap
 import matplotlib.pyplot as plt
+import matplotlib.cm as cm
 import seaborn
 import colorsys
 
 # Import files
-fileIn1 = 'Dissolved Inorganic Nutrients.csv'
+fileIn1 = 'inOrganicNutrientsClean.csv'
 fileIn4 = 'seaIceMonth.txt'
 fileIn5 = 'seaIceAnnual.txt'
 fileIn6 = 'Primary Production.csv'
@@ -29,10 +30,11 @@ if(os.path.isfile(fileIn1)):
     inOrg = inOrg[inOrg.lon.notnull()]
     inOrg = inOrg[inOrg.lat.notnull()]
     inOrg = inOrg[inOrg.datetime.notnull()]    
-#    inOrg =inOrg[inOrg.datetime>'1995-12-31 00:00:00'] # start date
+    inOrg =inOrg[inOrg.datetime>'1999-12-31 00:00:00'] # start date
     inOrg.datetime=pd.to_datetime(inOrg.datetime,format='%Y-%m-%d %H:%M:%S',exact=True)   
     inOrg['year']=pd.DatetimeIndex(inOrg['datetime']).year  
     inOrg['month']=pd.DatetimeIndex(inOrg['datetime']).month
+#    inOrg['second']=pd.DatetimeIndex(inOrg['datetime']).second
     inOrg.lat=abs(inOrg.lat.map('{:,.5f}'.format).astype(float))*-1 # convert all to south
     inOrg.lon=abs(inOrg.lon.map('{:,.5f}'.format).astype(float))*-1 # convert all to west
     inOrg = inOrg.reset_index()
@@ -55,11 +57,6 @@ else:
 #pP = pd.read_csv(fileIn6,sep=',',skiprows=1,names=colPP,na_filter=True)
 #o2 = pd.read_csv(fileIn7,sep=',',skiprows=1,names=colO2,na_filter=True)
 
-# Global variables
-skip 		= -999
-lblSize 	= 12
-colorSwatch=_get_colors(10)
-mark      	=   ['o','p','d','v']
 
 """****************************************************************************
 Before we can do any anaylsis, we need to wrangle the data into a usable format.
@@ -106,7 +103,7 @@ def cord2stationID(df,latIn,lonIn):
 			stationOut.append("outGrid")
 		# Find standard latitude that is closest to observed.		
 		else:
-			querry =     grid[grid.lat<=latIn[i]+.0645]
+			querry =     grid[grid.lat<=latIn[i]+.0645] #???
 			querry = querry[querry.lat>=latIn[i]-.0645]
 			# If DNE...
 			if querry.empty:
@@ -116,8 +113,8 @@ def cord2stationID(df,latIn,lonIn):
 				lost += 1
                  # IF DE, let's look for standard longitude closest to observed.			
 			else:
-				querry = querry[querry.lon<=lonIn[i]+0.05]
-				querry = querry[querry.lon>=lonIn[i]-0.05]
+				querry = querry[querry.lon<=lonIn[i]+0.08]
+				querry = querry[querry.lon>=lonIn[i]-0.08]
 				qLen = len(querry.index)
 				# If DNE...
 				if querry.empty:
@@ -130,6 +127,7 @@ def cord2stationID(df,latIn,lonIn):
 					latOut.append(np.asarray(querry.lat, dtype=np.float)[0])
 					lonOut.append(np.asarray(querry.lon, dtype=np.float)[0])
 					stationOut.append(np.asarray(querry.name, dtype=object)[0])
+					found += 1
 				else: # the list has multiple values
 					qLon = querry.lon.values
 					qLat = querry.lat.values
@@ -146,7 +144,7 @@ def cord2stationID(df,latIn,lonIn):
 					latOut.append(qLat[mindex])
 					lonOut.append(qLon[mindex])
 					stationOut.append(qStation[mindex])
-				found += 1
+					found += 1
 	print("found:",found,"\nlost:",lost,"\nsum:",sumD,'\nout',outOfB)
 	
 	df.lat = latOut[:x]
@@ -175,7 +173,8 @@ def _get_colors(num_colors):
     return colors
 
 # run the program, which wrangles the data into the correct format.			
-inOrgClean = cord2stationID(inOrg,inOrg.lat,inOrg.lon)
+#inOrgClean = cord2stationID(inOrg,inOrg.lat,inOrg.lon)
+#inOrgClean.drop(inOrgClean[['year','month','second']],axis=1,inplace=True)
 #convert2CSV(inOrgClean,'inOrganicNutrientsClean.csv')
 
 # find the distance between observations
@@ -185,6 +184,21 @@ yearStart = ['1993-01-00 00:00:00','1994-01-00 00:00:00','1995-01-00 00:00:00','
 yearEnd =   ['1993-12-30 00:00:00','1994-12-30 00:00:00','1995-12-30 00:00:00','1996-12-30 00:00:00','1997-12-30 00:00:00','1998-12-30 00:00:00','1999-12-30 00:00:00','2000-12-30 00:00:00',\
  '2001-12-30 00:00:00','2002-12-30 00:00:00','2003-12-30 00:00:00','2004-12-30 00:00:00','2005-12-30 00:00:00','2006-12-30 00:00:00','2007-12-30 00:00:00','2008-12-30 00:00:00','2009-12-30 00:00:00',\
  '2010-12-30 00:00:00','2011-12-30 00:00:00','2012-12-30 00:00:00','2013-12-30 00:00:00','2014-12-30 00:00:00']
+
+# Global variables
+skip 		= -999
+lblSize 	= 12
+
+years       = np.array(inOrg.year.unique())
+yearVar     = len(years)
+#colorSwatch = np.array(_get_colors(yearVar))
+colorSwatch = cm.gray(np.linspace(0, 1, yearVar))
+#tups        = [years,colorSwatch]
+color = pd.DataFrame(colorSwatch,columns=['hue','lightness','saturation','other'])
+color['year'] = years
+#color.hue = 0
+
+mark      	=   ['o','p','d','v']
 
 #aveDelLat = []
 #aveDelLon = []
@@ -320,40 +334,55 @@ yearEnd =   ['1993-12-30 00:00:00','1994-12-30 00:00:00','1995-12-30 00:00:00','
 #            plt.title(r'Nitrite',size=16)
 #            plt.show()
 
-nutrient = inOrgClean[inOrgClean.Nitrite!=skip]
+nutrient = inOrg[inOrg.Nitrite!=skip]
 nutrient = nutrient[nutrient.Nitrite.notnull()]
 nutrient = nutrient.reset_index()
 stationID = nutrient.stationID.unique()
-stationID.sort()
+#stationID.sort()
 stationLen = len(stationID)
 for i in range(stationLen):
-	# get all values in specific station for all years
-	interannual = nutrient[nutrient.stationID==stationID[i]]
-	yearList    = interannual.year.unique()
-	years       = len(yearList)
-	if(years <= 3):
-		print(stationID[i],"has no variability")
+	# get all values in specific station for all stationVar
+	stationData    = nutrient[nutrient.stationID==stationID[i]]
+	stationTime    = stationData.datetime.unique()
+	stationVar     = len(stationTime)
+	if(stationVar <= 6):
+		print(stationID[i],"has little/no variability")
 	else:
 		plt.figure(figsize=(4,8))
-		maxDep = interannual.depth.max()*-1
+		maxDep = stationData.depth.max()*-1
 		plt.ylim([maxDep-20,0])
 		plt.xlabel(r'PO4 [$\mu$m/L]',size=lblSize )
 		plt.ylabel('Water column height [m]',size=lblSize )
-		for j in range(years):
-			# get only values from selected year
-			target = interannual[interannual.year==yearList[j]]
-			target = target.sort(columns='depth')
-			x = target.Nitrite.values
-			y = target.depth.values*-1
-			labels = str()
-			plt.scatter(x,y ,marker=mark[j%4],s=12,color=colorSwatch[j%10],alpha=.7,zorder=10,label=labels)
-			plt.plot(x,y,color=colorSwatch[j%10])
+		for j in range(stationVar):
+			# get only values from selected stationInterannualVar
+			target    = stationData[stationData.datetime==stationTime[j]]
+#			eventList = target.datetime.unique()
+#			events    = len(eventList)
+			if (len(target.index)<=3):
+				break
+			else:
+#			if (events>1):
+#				for k in range(events):
+#					subtarget = target[target.datetime==eventList[k]]
+#					x = subtarget.Nitrite.values
+#					y = subtarget.depth.values*-1
+#					labels = np.asarray(subtarget.year, dtype=np.float)[0]
+#					plt.scatter(x,y ,marker=mark[k%4],s=12,color=colorSwatch[k%10],alpha=.7,zorder=10,label=labels)
+#					plt.plot(x,y,color=colorSwatch[k%10])
+##			target = target.sort(columns='depth')
+	#			else:
+				x = target.Nitrite.values
+				y = target.depth.values*-1
+				colorYear = (color[['hue','lightness','saturation']][color.year==np.asarray(target.year, dtype=np.float)[0]]).values
+				labels = round(np.asarray(target.year.unique(), dtype=np.float)[0],-1)
+				plt.scatter(x,y ,marker=mark[j%4],s=12,color=colorSwatch[j%14],alpha=.7,zorder=10,label=labels)
+				plt.plot(x,y,color=colorSwatch[j%14])
 		art = []		
 		plt.legend(scatterpoints=1,
 			           loc='lower left',
 			           ncol=3,
 			           fontsize=8)
-		plt.title(r'PO4 at '+str(target.lat.unique())+'W,'+str(target.lon.unique())+'S',size=16)
+		plt.title(r'Nitrite at '+str(np.asarray(target.lat, dtype=np.float)[0])+'W,'+str(np.asarray(target.lon, dtype=np.float)[0])+'S',size=16)
 		plt.show()
 ## plotting   
 #cordLon = inOrg.lon.unique()
@@ -408,31 +437,31 @@ for i in range(stationLen):
 #        plt.show()
 
 
-plt.figure(figsize=(12,12)) 
-map = Basemap(width=1600000,height=900000,
-            resolution='l',projection='stere',\
-            lat_ts=50,lat_0=-65.90,lon_0=-66.05)
-parallels = np.arange(-90.,90.,1.)
-map.drawparallels(parallels,labels=[False,False,False,True])
-meridians = np.arange(-180.,181.,1.)
-map.drawmeridians(meridians,labels=[True,False,False,False])
-map.drawcoastlines()
-map.fillcontinents()
-map.drawmapboundary()
-
-search = inOrgClean[inOrgClean.NO3!=skip]
-#search = search[search.year==2014]
-search = search[search.NO3.notnull()]
-
-x1 = search.lon.values.T.tolist()
-y1 = search.lat.values.T.tolist() 
-z1 = search.NO3.values.T.tolist()
-xS, yS = map(x1, y1)
-map.scatter(xS, yS, c=z1, marker='o',cmap='jet',s=12,linewidth=.08,alpha=.9)
-cbar = plt.colorbar(orientation='vertical',fraction=0.026, pad=0.04)
-plt.title('Antartic InOrganic NO2',size=16)
-#plt.clim(0,0.5)
-plt.show()
+#plt.figure(figsize=(12,12)) 
+#map = Basemap(width=1600000,height=900000,
+#            resolution='l',projection='stere',\
+#            lat_ts=50,lat_0=-65.90,lon_0=-66.05)
+#parallels = np.arange(-90.,90.,1.)
+#map.drawparallels(parallels,labels=[False,False,False,True])
+#meridians = np.arange(-180.,181.,1.)
+#map.drawmeridians(meridians,labels=[True,False,False,False])
+#map.drawcoastlines()
+#map.fillcontinents()
+#map.drawmapboundary()
+#
+#search = inOrgClean[inOrgClean.NO3!=skip]
+##search = search[search.year==2014]
+#search = search[search.NO3.notnull()]
+#
+#x1 = search.lon.values.T.tolist()
+#y1 = search.lat.values.T.tolist() 
+#z1 = search.NO3.values.T.tolist()
+#xS, yS = map(x1, y1)
+#map.scatter(xS, yS, c=z1, marker='o',cmap='jet',s=12,linewidth=.08,alpha=.9)
+#cbar = plt.colorbar(orientation='vertical',fraction=0.026, pad=0.04)
+#plt.title('Antartic InOrganic NO2',size=16)
+##plt.clim(0,0.5)
+#plt.show()
 
 plt.figure(figsize=(12,12)) 
 map = Basemap(width=1600000,height=900000,
