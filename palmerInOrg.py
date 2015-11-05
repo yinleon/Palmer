@@ -16,7 +16,7 @@ fileIn7 = 'Dissolved Oxygen.csv'
 fileIn8 = 'Dissolved Inorganic Carbon.csv'
 fileIn9 = 'Basic Western Antarctic Peninsula Survey Grid.csv'
 
-
+# Coluymn formats for each csv
 colInOrg    = ['studyName','eventNum','cast','bottle','datetime','stationID','gridLine',\
 'gridStation','lat','lon','percentIrradiance','depth','PO4','SiO4','NO2','NO3','NH4','Nitrite',\
 'notes']
@@ -188,17 +188,20 @@ yearEnd =   ['1993-12-30 00:00:00','1994-12-30 00:00:00','1995-12-30 00:00:00','
 # Global variables
 skip 		= -999
 lblSize 	= 12
+_cmap = 'YlGnBu'
+
 
 years       = np.array(inOrg.year.unique())
 yearVar     = len(years)
 #colorSwatch = np.array(_get_colors(yearVar))
-colorSwatch = cm.gray(np.linspace(0, 1, yearVar))
+#color = pd.DataFrame(colorSwatch,columns=['hue','lightness','saturation'])
+colorSwatch = cm.YlGnBu(np.linspace(0, 1, yearVar))
 #tups        = [years,colorSwatch]
 color = pd.DataFrame(colorSwatch,columns=['hue','lightness','saturation','other'])
 color['year'] = years
 #color.hue = 0
 
-mark      	=   ['o','p','d','v']
+mark      	=   ['o','p','d','v','s']
 
 #aveDelLat = []
 #aveDelLon = []
@@ -338,14 +341,14 @@ nutrient = inOrg[inOrg.Nitrite!=skip]
 nutrient = nutrient[nutrient.Nitrite.notnull()]
 nutrient = nutrient.reset_index()
 stationID = nutrient.stationID.unique()
-#stationID.sort()
+stationID.sort()
 stationLen = len(stationID)
-for i in range(stationLen):
+for i in range(stationLen-2):
 	# get all values in specific station for all stationVar
 	stationData    = nutrient[nutrient.stationID==stationID[i]]
 	stationTime    = stationData.datetime.unique()
 	stationVar     = len(stationTime)
-	if(stationVar <= 6):
+	if(stationVar <= 2):
 		print(stationID[i],"has little/no variability")
 	else:
 		plt.figure(figsize=(4,8))
@@ -373,16 +376,17 @@ for i in range(stationLen):
 	#			else:
 				x = target.Nitrite.values
 				y = target.depth.values*-1
-				colorYear = (color[['hue','lightness','saturation']][color.year==np.asarray(target.year, dtype=np.float)[0]]).values
-				labels = round(np.asarray(target.year.unique(), dtype=np.float)[0],-1)
-				plt.scatter(x,y ,marker=mark[j%4],s=12,color=colorSwatch[j%14],alpha=.7,zorder=10,label=labels)
-				plt.plot(x,y,color=colorSwatch[j%14])
+				colorYear = (color[['hue','lightness','saturation']][color.year==np.asarray(target.year.unique(), dtype=np.float)[0]]).values
+				labels = np.asarray(target.year.unique(), dtype=np.int)[0]
+				plt.scatter(x,y ,marker=mark[j%5],s=20,color=colorYear,zorder=1,linewidth=.2,label=labels)
+				plt.plot(x,y,color=colorYear[0],zorder=10)
 		art = []		
 		plt.legend(scatterpoints=1,
 			           loc='lower left',
-			           ncol=3,
-			           fontsize=8)
-		plt.title(r'Nitrite at '+str(np.asarray(target.lat, dtype=np.float)[0])+'W,'+str(np.asarray(target.lon, dtype=np.float)[0])+'S',size=16)
+			           ncol=1,
+			           fontsize=10)
+		#plt.title(r'Nitrite at '+str(np.asarray(target.lat, dtype=np.float)[0])+'W,'+str(np.asarray(target.lon, dtype=np.float)[0])+'S',size=16)
+		plt.title(r'Nitrite at Station '+np.asarray(target.stationID)[0],size=16)
 		plt.show()
 ## plotting   
 #cordLon = inOrg.lon.unique()
@@ -483,7 +487,7 @@ x1 = search.lon.values.T.tolist()
 y1 = search.lat.values.T.tolist() 
 z1 = search.NO3.values.T.tolist()
 xS, yS = map(x1, y1)
-map.scatter(xS, yS, c=z1, marker='o',cmap='jet',s=12,linewidth=.08,alpha=.9)
+map.scatter(xS, yS, c=z1, marker='o',cmap=_cmap,s=12,linewidth=.08,alpha=.9)
 cbar = plt.colorbar(orientation='vertical',fraction=0.026, pad=0.04)
 plt.title('Antartic InOrganic NO2',size=16)
 #plt.clim(0,0.5)
