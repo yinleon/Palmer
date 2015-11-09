@@ -171,6 +171,16 @@ def _get_colors(num_colors):
         saturation  = (90 + np.random.rand() * 10) / 100.
         colors.append(colorsys.hls_to_rgb(hue, lightness, saturation))
     return colors
+"""****************************************************************************
+Use this function to convert non-standardized StationIDs to coordinates and
+standardized stationIOs
+****************************************************************************"""
+# remove all minus signs
+# parse betwn strings and nums
+# remove "pal" from strings
+
+
+
 
 # run the program, which wrangles the data into the correct format.			
 #inOrgClean = cord2stationID(inOrg,inOrg.lat,inOrg.lon)
@@ -348,7 +358,7 @@ for i in range(stationLen-2):
 	stationData    = nutrient[nutrient.stationID==stationID[i]]
 	stationTime    = stationData.datetime.unique()
 	stationVar     = len(stationTime)
-	if(stationVar <= 2):
+	if(stationVar <= 3):
 		print(stationID[i],"has little/no variability")
 	else:
 		plt.figure(figsize=(4,8))
@@ -497,5 +507,147 @@ plt.show()
 
 #cords.lat = inOrg.lat.round(decimals=1,out=None).unique()
 #for i in range(len(cords)):
+
+"""
+# Global variables
+mark = ['o','p','d','v','s']
+_cmap = 'YlGnBu'
+colorSwatch = cm.YlGnBu(np.linspace(0, 1, yearVar))
+color = pd.DataFrame(colorSwatch,columns=['hue','lightness','saturation','other'])
+color['year'] = yearList
+nutrient = inOrg[inOrg.Nitrite!=skip]
+nutrient = nutrient[nutrient.Nitrite.notnull()]
+nutrient = nutrient.reset_index()
+stationID = nutrient.stationID.unique()
+stationID.sort()
+stationLen = len(stationID)
+for i in range(stationLen-2):
+    # get all values in specific station for all stationVar
+    stationData    = nutrient[nutrient.stationID==stationID[i]]
+    stationTime    = stationData.datetime.unique()
+    stationVar     = len(stationTime)
+    if(stationVar <= 2):
+        print(stationID[i],"has little/no variability")
+    else:
+        plt.figure(figsize=(4,8))
+        plt.locator_params(axis = 'x',nbins=5)
+        maxDep = stationData.depth.max()*-1
+        plt.ylim([maxDep-20,0])
+        plt.xlabel(r'PO4 [$\mu$m/L]')
+        plt.ylabel('Water column height [m]')
+        for j in range(stationVar):
+            # get only values from selected stationInterannualVar
+            target    = stationData[stationData.datetime==stationTime[j]]
+            if (len(target.index)<=3):
+                break
+            else:
+                x = target.Nitrite.values
+                y = target.depth.values*-1
+                colorYear = (color[['hue','lightness','saturation']][color.year==np.asarray(target.year.unique(), dtype=np.float)[0]]).values
+                labels = np.asarray(target.year, dtype=np.int)[0]
+                plt.scatter(x,y ,marker=mark[j%5],s=20,color=colorYear,zorder=1,linewidth=.2,label=labels)
+                plt.plot(x,y,color=colorYear[0],zorder=10)
+                plt.legend(scatterpoints=1,
+                       loc='lower left',
+                       ncol=1,
+                       fontsize=10)
+        #plt.title(r'Nitrite at '+str(np.asarray(target.lat, dtype=np.float)[0])+'W,'+str(np.asarray(target.lon, dtype=np.float)[0])+'S',size=16)
+        plt.title(r'Nitrite at Station '+np.asarray(target.stationID)[0])
+        plt.show()
+"""
+
+
+"""
+# Global variables
+nutrient      = inOrg[inOrg.PO4!=skip]
+nutrient      = nutrient[nutrient.PO4.notnull()]
+nutrient      = nutrient.reset_index()
+stationID     = nutrient.stationID.unique()
+stationID.sort()
+stationLen    = len(stationID)
+yearList      = np.array(nutrient.year.unique())
+yearVar       = len(yearList)  
+colorSwatch   = cm.YlOrRd(np.linspace(0, 1, yearVar))
+color         = pd.DataFrame(colorSwatch,columns=['hue','lightness','saturation','other'])
+color['year'] = yearList
+
+for i in range(stationLen-2):
+    # get all values in specific station for all stationVar
+    stationData    = nutrient[nutrient.stationID==stationID[i]]
+    stationTime    = stationData.datetime.unique()
+    stationVar     = len(stationTime)
+    if(stationVar >= 4):
+        #print("blah blah blah")
+    #else:
+        plt.figure(figsize=(4,8))
+        maxDep = stationData.depth.max()*-1
+        plt.ylim([maxDep-20,0])
+        plt.xlabel(r'PO4 [$\mu$m/L]')
+        plt.ylabel('Water column height [m]')
+        plt.locator_params(axis = 'x',nbins=5)
+        countPO4 = 0                                         # make sure the station isn't empty for each nutrient
+        for j in range(stationVar):
+            target = stationData[stationData.datetime==stationTime[j]]  # get only values from selected stationInterannualVar
+            if(len(target.index) <= 3):                      # make sure there are more than 3 points per time
+                break
+            else:
+                PO4 = target[target.PO4!=skip]
+                PO4 = PO4[PO4.PO4.notnull()]
+                x = PO4.PO4.values
+                y = PO4.depth.values*-1
+                if(x.any()):
+                    colorYear = (color[['hue','lightness','saturation']][color.year==np.asarray(target.year.unique(), dtype=np.float)[0]]).values
+                    labels = np.asarray(target.year, dtype=np.int)[0]
+                    plt.scatter(x,y ,marker=mark[j%5],s=20,color=colorYear,zorder=1,linewidth=.2,label=labels)
+                    plt.plot(x,y,color=colorYear[0],zorder=10)
+                    plt.legend(scatterpoints=1,
+                       loc='lower left',
+                       ncol=1,
+                       fontsize=10)
+                    countPO4 += 1
+        if(countPO4==0):
+            plt.close()
+        plt.title(r'PO4 at Station '+np.asarray(target.stationID)[0]+' ('+str(np.asarray(target.lat)[0])+','\
+                  +str(np.asarray(target.lon)[0])+')')
+        plt.show();
+"""
+"""
+nutrient    = inOrg[inOrg.Nitrite!=skip]
+nutrient    = nutrient[nutrient.Nitrite.notnull()]
+yearList    = nutrient.year.unique()
+yearList.sort()
+yearVar     = len(yearList)
+print(yearList)
+for i in range(yearVar):
+    querry  = nutrient[nutrient.year==yearList[i]]
+    querry  = querry[querry.depth<=15]
+    querry  = querry[querry.stationID!='outGrid']
+    querry  = querry[querry.stationID!='notFound']
+    # Define the plotable elements
+    x = querry.lat.values
+    y = querry.lon.values
+    z = querry.Nitrite.values
+    # If it's not empty let's interpolate!
+    print(x)
+    print(y)
+    if(len(x)>10):
+        # define grid.
+        xi = np.linspace(x.min(),x.max(),300)
+        yi = np.linspace(y.min(),y.max(),300)
+        # grid the data.
+        zi = griddata((x, y), z, (xi[None,:], yi[:,None]), method='cubic')
+        # contour the gridded data.
+        #CS = plt.contour(xi,yi,zi,30,,colors='k')
+        CS = plt.contourf(xi,yi,zi,20,cmap=plt.cm.jet)
+        plt.colorbar() # draw colorbar
+        # plot data points.
+        plt.scatter(x,y,c=z,marker='o',s=24,cmap=plt.cm.jet)
+        plt.xlim(min(x),max(x))
+        plt.ylim(min(y),max(y))
+        plt.title('Interpolated WAP Nitrate '+str(np.asarray(querry.year)[0])+'(%d points)' % len(x))
+        plt.show()
+    else:
+        print("empty")
+    """
 
     
