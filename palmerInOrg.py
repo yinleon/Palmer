@@ -22,7 +22,7 @@ colInOrg    = ['studyName','eventNum','cast','bottle','datetime','stationID','gr
 'notes']
 colPP = ["studyName","eventNum","datetime","lat","lon","julianDay","stationID","percentIrradiance","depth","primaryProd","primProdSTD","notes"]
 colO2 = ["studyName","eventNum","datetime","gridLine","gridStation","lat","lon","stationID","bottleNumber","depth","O2_ml/L","O2_micromol/L","notes"]
-colCO2 = ["studyName","dateTime","eventNum","bottle","stationID","depth","dic1","dic2","alk1","alk2","notes"]
+colCO2 = ["studyName","datetime","eventNum","bottle","stationID","depth","dic1","dic2","alk1","alk2","notes"]
 colGrid = ["studyName","gridLine","gridStation","name","lat","lon","gridCode"]
 
 if(os.path.isfile(fileIn1)):
@@ -346,7 +346,7 @@ mark      	=   ['o','p','d','v','s']
 #    
 #            plt.title(r'Nitrite',size=16)
 #            plt.show()
-
+"""
 nutrient = inOrg[inOrg.Nitrite!=skip]
 nutrient = nutrient[nutrient.Nitrite.notnull()]
 nutrient = nutrient.reset_index()
@@ -398,6 +398,8 @@ for i in range(stationLen-2):
 		#plt.title(r'Nitrite at '+str(np.asarray(target.lat, dtype=np.float)[0])+'W,'+str(np.asarray(target.lon, dtype=np.float)[0])+'S',size=16)
 		plt.title(r'Nitrite at Station '+np.asarray(target.stationID)[0],size=16)
 		plt.show()
+		
+"""
 ## plotting   
 #cordLon = inOrg.lon.unique()
 #cordLon.sort()
