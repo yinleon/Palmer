@@ -651,5 +651,38 @@ for i in range(yearVar):
     else:
         print("empty")
     """
+# works for 2000			
+infile1='package_650/01jan/ctd/STD/c2001010a.std'  
+import glob
+for filename in glob.glob('*.std'):
+	infile1 = filename
+	#infile1='package_650/01jan/ctd/STD/c2001010a.std'  
+	infile1='package_650/07jan/ctd/STD/c2007007a.std' 
+	f1=open(infile1,"rb") 
+	#lines = [line.rstrip('\n').replace("0.000e+00", "").replace("0.0000e+00", "") for line in open(infile1)]
+	lines = [line.replace("0.000e+00", "flat").replace("0.0000e+00", "NaN").split() for line in open(infile1)]	
+	#station = lines[0][19:].split()
+	cols = [" ".join(line).lower() for line in lines[1:20] if len(line)<12]
+	rows = lines[len(cols)+1:]
+	
+	df = pd.DataFrame(data=np.reshape(rows,(len(rows),len(cols))),columns=cols)
+	
+	df['year'] = '20'+infile1.split('/')[1][:2]
+	df['station'] = lines[0][5]
+for i in range(len(cols)):
+	if(cols[i].find('sigma')!=-1):
+		sigmaCol= i
+		break
+	if(cols[i].find('temperature')!=-1):
+		tempecol= i
+		break
+	if(cols[i].find('pressure')!=-1):
+		temperature= i
+		break
+	
+	
+sigmaTheta = df[cols[sigmaCol]].astype(float)
+for isopyc in sigmaTheta:
+	if ((sigmaTheta[0]-isopyc) > .03):
+		print(isopyc)
 
-    

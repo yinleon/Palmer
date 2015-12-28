@@ -1,0 +1,62 @@
+* Sea-Bird SBE 9 Raw Data File:
+* FileName = C:\LMG0201\L21638.DAT
+* Software Version 4.242
+* Temperature SN = 2637
+* Conductivity SN = 2048
+* Number of Bytes Per Scan = 30
+* Number of Voltage Words = 4
+* Number of Scans Averaged by the Deck Unit = 1
+* System UpLoad Time = Jan 25 2002 16:32:28
+* NMEA Latitude = 64 48.91 S
+* NMEA Longitude = 064 02.32 W
+* NMEA UTC (Time) = 16:32:14
+* Store Lat/Lon Data = Append to .NAV File When <Ctrl_N> is Pressed
+* Command Line = seasave 
+** Ship: LMG
+** Cruise:  LMG0201
+** Station:   LTER E
+** Latitude:  64 48.900
+** Longitude: 64 02.430
+** 169m deep
+# interval = seconds: 0.0416667                   
+# start_time = Jan 25 2002 16:32:28
+# sensor 0 = Frequency  0  temperature, primary, 2637, 26-Jun-01
+# sensor 1 = Frequency  1  conductivity, primary, 2048, 26-JUL-01, cpcor = -9.5700e-08
+# sensor 2 = Frequency  2  pressure, 53952, 29-JUN-01
+# sensor 3 = Frequency  3  temperature, secondary, 1027, 15-MAY-01
+# sensor 4 = Frequency  4  conductivity, secondary, 2250, 26-JUL-01, cpcor = -9.5700e-08
+# sensor 5 = Extrnl Volt  0  oxygen, current, 130374, 01-JUN-01
+# sensor 6 = Extrnl Volt  1  oxygen, temperature, 130374, 01-JUN-01
+# sensor 7 = Extrnl Volt  2  fluorometer, chelsea, 088015, 24-APR-01
+# sensor 8 = Extrnl Volt  4  irradiance (PAR), 4470, 20-AUG-01
+# sensor 9 = Extrnl Volt  5  WET Labs, beam transmission, CST-406DR, 28-FEB-01
+# datcnv_date = Sep 22 2003 15:22:27, 4.247
+# datcnv_in = L21638.DAT L21638.CON
+# rossum_date = Sep 22 2003 17:08:17, 4.247
+# rossum_in = L21638.ROS L21638.CON L21638.BL
+    Bottle        Date      Sal00      Sal11     OxML/L  Sigma-é00         Pr       T090       T190        Par  WetBTrans        FlC        OxC        OxT
+  Position        Time                                                                                                                                    
+      1    Jan 25 2002    33.3725    33.3664    8.65665    26.7774     11.026     0.2955     0.2991 7.3271e+00     75.210 3.7704e+00    0.40367    0.04120 (avg)
+              16:50:01                                                  0.063     0.0017     0.0041 1.8238e-01      0.661 3.8433e-01    0.00097    0.00377 (sdev)
+                                                                       10.912     0.2914     0.2898 6.9462e+00     74.100 3.0706e+00    0.40173    0.03971 (min)
+                                                                       11.184     0.2979     0.3053 7.5151e+00     76.610 4.1882e+00    0.40503    0.05060 (max)
+      2    Jan 25 2002    33.2134    33.2078    9.59541    26.6346      7.004     0.5644     0.5715 2.9628e+01     66.315 9.4887e+00    0.44924   -0.02700 (avg)
+              16:50:45                                                  0.086     0.0214     0.0234 8.4431e-01      1.153 1.5823e+00    0.00148    0.00361 (sdev)
+                                                                        6.857     0.5418     0.5467 2.8893e+01     63.550 6.9169e+00    0.44729   -0.03655 (min)
+                                                                        7.210     0.6045     0.6132 3.1613e+01     68.140 1.1810e+01    0.45238   -0.02566 (max)
+      3    Jan 25 2002    33.1914    33.1857   10.22938    26.6106      5.944     0.6744     0.6809 5.3336e+01     66.613 9.4857e+00    0.47926   -0.04745 (avg)
+              16:51:09                                                  0.055     0.0053     0.0036 1.7397e+00      0.927 6.5894e-01    0.00195 1.2683e-09 (sdev)
+                                                                        5.869     0.6625     0.6738 4.8468e+01     65.080 8.5196e+00    0.47636   -0.04745 (min)
+                                                                        6.088     0.6809     0.6858 5.5005e+01     68.740 1.0612e+01    0.48296   -0.04745 (max)
+      4    Jan 25 2002    33.1839    33.1764   10.38864    26.6050      4.266     0.6676     0.6728 1.1222e+02     65.221 8.5051e+00    0.49124   -0.04551 (avg)
+              16:51:37                                                  0.072     0.0016     0.0014 5.9958e+00      0.752 7.8485e-01    0.00015    0.00420 (sdev)
+                                                                        4.103     0.6642     0.6700 1.0501e+02     63.360 7.2766e+00    0.49105   -0.04745 (min)
+                                                                        4.368     0.6704     0.6755 1.2018e+02     66.660 9.7250e+00    0.49135   -0.03655 (max)
+      5    Jan 25 2002    33.1841    33.1743   10.34227    26.6053      2.004     0.6639     0.6787 3.1132e+02     63.844 8.0577e+00    0.49039   -0.01716 (avg)
+              16:52:03                                                  0.033     0.0201     0.0160 9.8744e+00      0.897 4.5064e-01    0.00052    0.00454 (sdev)
+                                                                        1.919     0.6434     0.6574 2.9302e+02     61.540 7.2357e+00    0.48955   -0.02566 (min)
+                                                                        2.048     0.7003     0.7059 3.2882e+02     65.490 8.6161e+00    0.49135   -0.01477 (max)
+      6    Jan 25 2002    33.1604    33.1556   10.56833    26.5813      0.015     0.7492     0.7544 7.2695e+02     63.447 6.4630e+00    0.50091    0.02329 (avg)
+              16:52:46                                                  0.070     0.0038     0.0032 2.6490e+01      0.922 2.7975e-01    0.00043    0.00548 (sdev)
+                                                                       -0.128     0.7439     0.7505 6.6593e+02     61.230 5.9743e+00    0.50004    0.01792 (min)
+                                                                        0.143     0.7566     0.7617 7.6860e+02     65.420 6.8974e+00    0.50154    0.02881 (max)

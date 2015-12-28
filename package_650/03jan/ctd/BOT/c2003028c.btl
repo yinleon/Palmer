@@ -1,0 +1,47 @@
+* Sea-Bird SBE 9 Data File:
+* FileName = C:\Data\Raw\g301629.dat
+* Software Version Seasave Win32 V 5.25a
+* Temperature SN = 2470
+* Conductivity SN = 2065
+* Number of Bytes Per Scan = 33
+* Number of Voltage Words = 5
+* Number of Scans Averaged by the Deck Unit = 1
+* System UpLoad Time = Jan 28 2003 16:51:11
+* NMEA Latitude = 68 05.95 S
+* NMEA Longitude = 068 32.30 W
+* NMEA UTC (Time) = none
+* Store Lat/Lon Data = Add to Header Only
+** Ship:  Laurence M. Gould   
+** Cruise:  LMG0301 
+** Station: 216.-068
+** Cast #: 078
+** Operator: fwas
+** Event: 629
+** Lattitude 
+** Longitude 
+** Time 
+** Date 28-Jan-03
+**   
+** !!! TURN ON TAPE !!! 
+# interval = seconds: 0.0416667                   
+# start_time = Jan 28 2003 16:51:11
+# sensor 0 = Frequency  0  temperature, primary, 2470, 25-Jun-02
+# sensor 1 = Frequency  1  conductivity, primary, 2065, 25-June-02, cpcor = -9.5700e-08
+# sensor 2 = Frequency  2  pressure, 53952, 29-Jun-01
+# sensor 3 = Frequency  3  temperature, secondary, 2444, 22-June-02
+# sensor 4 = Frequency  4  conductivity, secondary, 2047, 25-Jun-02, cpcor = -9.5700e-08
+# sensor 5 = Extrnl Volt  2  fluorometer, chelsea, 088015, 08-Aug-02
+# sensor 6 = Extrnl Volt  4  irradiance (PAR), 4470, 19-Jul-02
+# sensor 7 = Extrnl Volt  5  WET Labs, beam transmission, CST-553DR, 12-Dec-02
+# sensor 8 = Extrnl Volt  6  Oxygen, SBE, primary, 0182, 05-Nov-02
+# sensor 9 = Extrnl Volt  9  surface irradiance (SPAR), degrees = 0.0
+# datcnv_date = Sep 15 2005 11:36:10, 4.249
+# datcnv_in = G301629.DAT G301629.CON
+# rossum_date = Sep 15 2005 12:36:52, 4.249
+# rossum_in = G301629.ROS G301629.CON G301629.BL
+    Bottle        Date      Sal00      Sal11  Sigma-é00  OxsatML/L         Pr       T090       T190        Par  WetBTrans        FlC Sbeox0ML/L       DepS      TimeJ
+  Position        Time                                                                                                                                               
+      1    Jan 28 2003    33.2418    33.2374    26.6520    8.00157      3.042     0.6587     0.6557 5.3900e+01     72.148 2.2508e+00    9.85309      3.012   28.71044 (avg)
+              17:02:59                                                  0.052     0.0015     0.0003 1.3188e+00      0.489 1.5266e-01    0.00026      0.051    0.00001 (sdev)
+      2    Jan 28 2003    33.2415    33.2368    26.6518    8.00132      2.956     0.6599     0.6573 5.5453e+01     72.284 2.4172e+00    9.85613      2.926   28.71048 (avg)
+              17:03:02                                                  0.060     0.0011     0.0005 3.4270e+00      0.323 1.1734e-01    0.00250      0.059    0.00001 (sdev)

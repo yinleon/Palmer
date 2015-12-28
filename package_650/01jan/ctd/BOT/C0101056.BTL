@@ -1,0 +1,58 @@
+* Sea-Bird SBE 9 Raw Data File:
+* FileName = LMG0101\RAW\C0101056.DAT
+* Software Version 4.247
+* Temperature SN = 2658
+* Conductivity SN = 2293
+* Number of Bytes Per Scan = 30
+* Number of Voltage Words = 4
+* Number of Scans Averaged by the Deck Unit = 1
+* System UpLoad Time = Jan 25 2001 13:29:33
+* NMEA Latitude = 64 48.90 S
+* NMEA Longitude = 064 02.35 W
+* NMEA UTC (Time) = 13:29:30
+* Store Lat/Lon Data = Append to .NAV File When <Ctrl_N> is Pressed
+* Command Line = seasave -l -essprof 
+** Ship:L M Gould 
+** Cruise: LMG01-01 LTER Jan 2001 
+** Grid Location:  Palmer E
+** Event Number: 771
+** FRRF on.  Last CTD of LTER Jan 2001 cruise.
+* Jan 25 2001 13:32:47,  64 48.91 S,  64  2.36 W, 2.663, 4670
+* Jan 25 2001 13:44:42,  64 48.91 S,  64  2.35 W, 171.693, 21832
+* Jan 25 2001 13:59:52,  64 48.91 S,  64  2.32 W, 0.396, 43686
+# interval = seconds: 0.0416667                   
+# start_time = Jan 25 2001 13:29:33
+# sensor 0 = Frequency  0  temperature, primary, 2658, 22-Aug-00
+# sensor 1 = Frequency  1  conductivity, primary, 2293, 22-Aug-00, cpcor = -9.5700e-08
+# sensor 2 = Frequency  2  pressure, 53952, 8 June 1999
+# sensor 3 = Frequency  3  temperature, secondary, 2637, 22-Aug-00
+# sensor 4 = Frequency  4  conductivity, secondary, 2247, 22-Aug-00, cpcor = -9.5700e-08
+# sensor 5 = Extrnl Volt  0  oxygen, current, 373 mem 0-01-08, 15-Mar-2000
+# sensor 6 = Extrnl Volt  1  oxygen, temperature, 373 mem 0-01-08, 15-Mar-2000
+# sensor 7 = Extrnl Volt  2  altimeter
+# sensor 8 = Extrnl Volt  3  fluorometer, chelsea, 88/050/93, 24-Jun-99
+# sensor 9 = Extrnl Volt  4  irradiance (PAR), 4470, 31-Jul-00
+# sensor 10 = Extrnl Volt  5  WET Labs, beam transmission, CST-407DR, 16-Nov-00
+# sensor 11 = Extrnl Volt  7  surface irradiance (SPAR), degrees = 0.0
+# datcnv_date = Feb 26 2003 13:24:30, 4.247
+# datcnv_in = C0101056.DAT C0101056.CON
+# rossum_date = Feb 26 2003 13:31:22, 4.247
+# rossum_in = C0101056.ROS C0101056.CON C0101056.BL
+    Bottle        Date    OxMm/Kg      Sal00      Sal11         Pr       T090      C0S/m       T190      C1S/m        Par  WetBTrans        FlC        OxC        OxT      TimeJ        Nbf
+  Position        Time                                                                                                                                                                     
+     12    Jan 25 2001    219.096    34.4418    34.4492    171.776     0.7801   2.936017     0.7813   2.936692 3.5929e-04     89.533 3.7327e-02    0.26460    0.60953   25.57284          1 (avg)
+              13:44:51                                       0.106     0.0003   0.000269     0.0001   0.000081 1.8784e-11      0.045 2.8988e-03    0.00012    0.00252    0.00001          0 (sdev)
+     14    Jan 25 2001    349.504    33.8624    33.8689     22.373     2.1408   3.000137     2.1413   3.000695 1.5855e+01     79.258 2.2177e+00    0.45016    0.97353   25.57962          2 (avg)
+              13:54:37                                       0.093     0.0024   0.000149     0.0016   0.000090 4.0128e-01      0.911 1.3309e-01    0.00021    0.00220    0.00001          0 (sdev)
+     16    Jan 25 2001    355.158    33.7567    33.7748     14.106     2.3569   3.009750     2.3320   3.009084 9.0344e+01     78.436 2.3924e+00    0.46356    1.18763   25.58063          3 (avg)
+              13:56:04                                       0.037     0.0185   0.000933     0.0385   0.001967 3.6575e+00      1.711 4.0113e-01    0.00018    0.00554    0.00001          0 (sdev)
+     18    Jan 25 2001    353.632    33.7727    33.7804     10.926     2.3236   3.008043     2.3211   3.008449 1.8980e+02     79.014 2.6222e+00    0.46287    1.33362   25.58127          4 (avg)
+              13:57:00                                       0.148     0.0042   0.000248     0.0035   0.000168 1.2216e+01      0.723 2.1292e-01    0.00015    0.00526    0.00001          0 (sdev)
+     20    Jan 25 2001    356.093    33.7511    33.7616      7.385     2.3758   3.010608     2.3682   3.010804 4.7081e+02     79.219 2.1460e+00    0.46823    1.45475   25.58190          5 (avg)
+              13:57:54                                       0.169     0.0108   0.000438     0.0050   0.000190 4.5300e+01      0.609 2.5520e-01    0.00015    0.00448    0.00001          0 (sdev)
+     22    Jan 25 2001    359.208    33.6987    33.7264      3.480     2.3645   3.005237     2.3642   3.007454 1.3005e+03     79.027 9.3058e-01    0.47323    1.54681   25.58249          6 (avg)
+              13:58:45                                       0.067     0.0009   0.000528     0.0012   0.000298 1.3927e+02      0.508 3.3937e-02    0.00006    0.00410    0.00001          0 (sdev)
+     24    Jan 25 2001    359.416    33.6787    33.6878      2.203     2.4504   3.010904     2.4448   3.011156 4.1619e+03     80.624 4.7658e-01    0.47516    1.60421   25.58289          7 (avg)
+              13:59:20                                       0.144     0.0236   0.001575     0.0175   0.001297 9.1345e+02      0.445 2.0902e-02    0.00020    0.00539    0.00001          0 (sdev)
+      1    Jan 25 2001    411.916     0.6768    12.8999      0.368     2.6167   0.078201     2.5274   1.252243 4.7652e+03     34.057 1.1242e+03    0.44573    1.67698   25.58323          8 (avg)
+              13:59:48                                       0.032     0.0213   0.005375     0.0033   1.149906 2.2853e+01      0.130 6.2056e-05    0.00714 4.5668e-08    0.00001          0 (sdev)

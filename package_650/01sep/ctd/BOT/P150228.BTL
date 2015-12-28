@@ -1,0 +1,59 @@
+* Sea-Bird SBE 9 Raw Data File:
+* FileName = C:\DATA\RAW\P150228.DAT
+* Software Version 4.233
+* Temperature SN = 2186
+* Conductivity SN = 0926
+* Number of Bytes Per Scan = 30
+* Number of Voltage Words = 4
+* System UpLoad Time = Oct 17 2001 22:26:16
+* NMEA Latitude = 68 17.77 S
+* NMEA Longitude = 070 19.16 W
+* NMEA UTC (Time) = 22:26:11
+* Store Lat/Lon Data = Append to .NAV File When <Ctrl_N> is Pressed
+* Command Line = seasave 
+** Ship:   N. B. Palmer 
+** Cruise: NBP0105 
+** Station:   228 
+** Depth: 860     
+# interval = seconds: 0.0416667                   
+# start_time = Oct 17 2001 22:26:16
+# sensor 0 = Frequency  0  temperature, primary, 2186, 20-JUL-00
+# sensor 1 = Frequency  1  conductivity, primary, 0926, 19-SEP-00, cpcor = -9.5700e-08
+# sensor 2 = Frequency  2  pressure, 43528, 13-FEB-01
+# sensor 3 = Frequency  3  temperature, secondary, 2168, 20-AUG-99
+# sensor 4 = Frequency  4  conductivity, secondary, 2513, 20-SEP-00, cpcor = -9.5700e-08
+# sensor 5 = Extrnl Volt  0  oxygen, current, 0295, 21-JUL-00
+# sensor 6 = Extrnl Volt  1  oxygen, temperature, 0295, 21-JUL-00
+# sensor 7 = Extrnl Volt  2  irradiance (PAR), 4361, 06/27/01
+# sensor 8 = Extrnl Volt  4  fluorometer, chelsea, 088080, 16-JUL-01
+# sensor 9 = Extrnl Volt  6  transmissometer, 207D, 6/21/2001
+# datcnv_date = Sep 29 2003 12:15:51, 4.247
+# datcnv_in = P150228.DAT P150228.CON
+# rossum_date = Sep 29 2003 13:29:48, 4.247
+# rossum_in = P150228.ROS P150228.CON P150228.BL
+    Bottle        Date     OxML/L      Sal00      Sal11  Sigma-é00         Pr       T090       T190        FlC      Xmiss        Par      TimeJ        Nbf
+  Position        Time                                                                                                                                    
+      1    Oct 17 2001    3.60209    34.7213    34.7198    27.8021    817.837     1.3272     1.3269 2.6629e-02    89.1324 5.1716e-02  290.95306          1 (avg)
+              22:52:22                                                  0.030     0.0001     0.0001 2.2432e-03     0.0466 1.0523e-04    0.00002          0 (sdev)
+                                                                      817.710     1.3269     1.3267 2.2218e-02    89.0178 5.1396e-02  290.95305          1 (min)
+                                                                      817.904     1.3275     1.3273 3.0476e-02    89.2135 5.1831e-02  290.95308          1 (max)
+      2    Oct 17 2001    3.60279    34.7193    34.7175    27.7995    701.130     1.3334     1.3335 2.8500e-02    89.9393 5.1688e-02  290.95660          2 (avg)
+              22:57:28                                                  0.050     0.0002     0.0001 2.7203e-03     0.0115 1.6101e-04    0.00001          0 (sdev)
+                                                                      700.938     1.3331     1.3333 2.5077e-02    89.9229 5.1252e-02  290.95658          2 (min)
+                                                                      701.347     1.3337     1.3338 3.2918e-02    89.9473 5.1831e-02  290.95662          2 (max)
+      3    Oct 17 2001    3.57617    34.7153    34.7137    27.7946    599.605     1.3524     1.3519 2.9192e-02    90.1156 5.1710e-02  290.95884          3 (avg)
+              23:00:41                                                  0.038     0.0002     0.0006 5.1900e-03     0.0108 9.0468e-05    0.00002          0 (sdev)
+                                                                      599.497     1.3519     1.3507 2.0044e-02    90.0696 5.1541e-02  290.95882          3 (min)
+                                                                      599.772     1.3530     1.3530 3.7050e-02    90.1430 5.1831e-02  290.95886          3 (max)
+      4    Oct 17 2001    3.54276    34.7078    34.7060    27.7858    500.704     1.3857     1.3873 2.2938e-02    90.2127 5.1700e-02  290.96120          4 (avg)
+              23:04:05                                                  0.034     0.0014     0.0004 5.1688e-03     0.0156 1.4131e-04    0.00001          0 (sdev)
+                                                                      500.586     1.3829     1.3865 1.4273e-02    90.1919 5.1396e-02  290.96118          4 (min)
+                                                                      500.820     1.3886     1.3879 2.9855e-02    90.2409 5.1977e-02  290.96122          4 (max)
+      5    Oct 17 2001    3.51438    34.6893    34.6877    27.7696    400.682     1.3991     1.3988 6.1348e-02    90.2821 5.1803e-02  290.96389          5 (avg)
+              23:07:57                                                  0.026     0.0001     0.0001 5.4855e-03     0.0115 7.9016e-05    0.00002          0 (sdev)
+                                                                      400.618     1.3988     1.3986 4.7637e-02    90.2653 5.1541e-02  290.96387          5 (min)
+                                                                      400.743     1.3994     1.3990 6.7428e-02    90.2898 5.1977e-02  290.96390          5 (max)
+      6    Oct 17 2001    6.08770    33.7458    33.7431    27.1621     40.407    -1.8384    -1.8386 3.0130e-02    90.0415 4.7177e-01  290.97060          6 (avg)
+              23:17:37                                                  0.034     0.0001     0.0001 3.9454e-03     0.0171 7.3716e-04    0.00001          0 (sdev)
+                                                                       40.299    -1.8387    -1.8390 2.5630e-02    89.9962 4.6974e-01  290.97058          6 (min)
+                                                                       40.530    -1.8381    -1.8383 3.6054e-02    90.0696 4.7239e-01  290.97061          6 (max)

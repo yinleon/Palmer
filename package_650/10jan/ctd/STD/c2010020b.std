@@ -1,0 +1,28 @@
+20	! Event 328 Grid 166.-19
+prDM: Pressure, Digiquartz [db]
+t090C: Temperature [ITS-90, deg C]
+t190C: Temperature, 2 [ITS-90, deg C]
+sbeox0V: Oxygen Voltage, SBE 43
+sbeox1V: Oxygen Voltage, SBE 43, 2
+flECO-AFL: Fluorescence, Wetlab ECO-AFL/FL [mg/m^3]
+par: PAR/Irradiance, Biospherical/Licor
+xmiss: Beam Transmission, Chelsea/Seatech/Wetlab CStar [%]
+timeJ: Julian Days
+sal00: Salinity [PSU]
+sal11: Salinity, 2 [PSU]
+density00: Density [density, Kg/m^3]
+sigma-é00: Density [sigma-theta, Kg/m^3]
+depSM: Depth [salt water, m], lat = -68.1038
+potemp090C: Potential Temperature [ITS-90, deg C]
+sbeox0ML/L: Oxygen, SBE 43 [ml/l], WS = 2
+sbeox1ML/L: Oxygen, SBE 43, 2 [ml/l], WS = 2
+oxsolML/L: Oxygen Saturation, Garcia & Gordon [ml/l]
+nbin: number of scans per bin
+flag: flag
+      5.000     0.8041     0.8090     2.8805     2.7387     4.9209 2.1110e+01    88.3242  20.359388    33.7586    33.6493  1027.0832    27.0595      4.950     0.8039    7.04161    7.70981    7.91328          5 0.0000e+00
+      6.000     0.7978     0.7970     3.1498     2.8864     4.2617 1.6661e+01    88.6711  20.359966    33.6959    33.7047  1027.0378    27.0093      5.940     0.7976    7.89220    8.19460    7.91800         39 0.0000e+00
+      5.000     0.8326     0.8332     3.1588     2.8861     4.9659 2.4675e+01    87.8431  20.372903    33.7042    33.6998  1027.0376    27.0139      4.950     0.8324    7.89741    8.21005    7.91046        121 0.0000e+00
+      4.000     0.8946     0.8964     3.1838     2.9036     5.7718 5.0122e+01    85.6702  20.430784    33.6979    33.6966  1027.0241    27.0051      3.960     0.8944    7.95476    8.25188    7.89819         91 0.0000e+00
+      3.000     0.8905     0.8911     3.1829     2.9052     5.6446 6.0252e+01    85.8430  20.426721    33.6982    33.6967  1027.0198    27.0056      2.970     0.8904    7.95488    8.25794    7.89902         89 0.0000e+00
+      2.000     0.8895     0.8899     3.1840     2.9098     5.4324 7.4501e+01    85.8145  20.426795    33.6977    33.6961  1027.0147    27.0052      1.980     0.8894    7.95617    8.27767    7.89925         86 0.0000e+00
+      1.000     0.8892     0.8892     3.1839     2.9130     5.2816 1.9021e+02    85.7502  20.426850    33.6976    33.6958  1027.0098    27.0051      0.990     0.8892    7.95268    8.28401    7.89930         78 0.0000e+00

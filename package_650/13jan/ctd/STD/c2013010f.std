@@ -1,0 +1,29 @@
+22	! Event 166 Grid 400.100
+prDM: Pressure, Digiquartz [db]
+t090C: Temperature [ITS-90, deg C]
+t190C: Temperature, 2 [ITS-90, deg C]
+c0S/m: Conductivity [S/m]
+c1S/m: Conductivity, 2 [S/m]
+sbeox0V: Oxygen raw, SBE 43 [V]
+sbeox1V: Oxygen raw, SBE 43, 2 [V]
+flECO-AFL: Fluorescence, WET Labs ECO-AFL/FL [mg/m^3]
+par: PAR/Irradiance, Biospherical/Licor
+xmiss: Beam Transmission, Chelsea/Seatech [%]
+timeJ: Julian Days
+sal00: Salinity, Practical [PSU]
+sal11: Salinity, Practical, 2 [PSU]
+density00: Density [density, kg/m^3]
+sigma-é00: Density [sigma-theta, kg/m^3]
+depSM: Depth [salt water, m], lat = -65.8775
+potemp090C: Potential Temperature [ITS-90, deg C]
+sbeox0ML/L: Oxygen, SBE 43 [ml/l], WS = 2
+sbeox1ML/L: Oxygen, SBE 43, 2 [ml/l], WS = 2
+oxsolML/L: Oxygen Saturation, Garcia & Gordon [ml/l]
+nbin: number of scans per bin
+flag: flag
+   2.0  1.2760  1.2809  2.892192  2.892286  2.2127  2.6996  0.5816   1.0036e+02  88.3997  10.976256   33.4366   33.4326   1026.7800   26.7705    1.980  1.2759  7.5003  7.4101 7.83557  34 0.000000e+00
+   2.5  1.2812  1.2856  2.892473  2.892528  2.2976  2.7728  0.5627   8.6797e+01  97.1296  10.976698   33.4343   33.4303   1026.7802   26.7684    2.475  1.2811  7.8928  7.7059 7.83465  43 0.000000e+00
+   2.0  1.2809  1.2853  2.892382  2.892428  2.2970  2.7731  0.5572   1.0302e+02  94.8552  10.976839   33.4338   33.4296   1026.7774   26.7679    1.980  1.2808  7.7785  7.6264 7.83474  14 0.000000e+00
+   1.5  1.2801  1.2850  2.892330  2.892363  2.2943  2.7700  0.5633   1.5384e+02  85.3790  10.976809   33.4342   33.4294   1026.7755   26.7684    1.485  1.2800  7.7834  7.6225 7.83487   8 0.000000e+00
+   1.0  1.2811  1.2856  2.892340  2.892412  2.2943  2.7701  0.5631   2.3654e+02  93.5213  10.976813   33.4336   33.4296   1026.7725   26.7678    0.990  1.2811  7.7815  7.6236 7.83470  10 0.000000e+00
+   0.5  1.2815  1.2855  2.892355  2.892383  2.2943  2.7702  0.5643   2.6392e+02  92.0770  10.976818   33.4336   33.4297   1026.7702   26.7678    0.495  1.2815  7.7782  7.6233 7.83462  13 0.000000e+00

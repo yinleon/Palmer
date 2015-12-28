@@ -1,0 +1,42 @@
+* Sea-Bird SBE 9 Data File:
+* FileName = E:\Data\Raw\LMG0701\g701018.dat
+* Software Version Seasave Win32 V 5.31a
+* Temperature SN = 2637
+* Conductivity SN = 0350
+* Number of Bytes Per Scan = 30
+* Number of Voltage Words = 4
+* Number of Scans Averaged by the Deck Unit = 1
+* System UpLoad Time = Jan 14 2007 09:41:37
+* NMEA Latitude = 65 06.63 S
+* NMEA Longitude = 067 05.02 W
+* NMEA UTC (Time) = Jan 14 2007  09:41:32
+* Store Lat/Lon Data = Add to Header Only
+** Ship:  Laurence M. Gould 
+** Cruise:  LMG0701 
+** Cast: 018
+** Event: 186
+# interval = seconds: 0.0416667                   
+# start_time = Jan 14 2007 09:41:37
+# sensor 0 = Frequency  0  temperature, primary, 2637, 24-Mar-06
+# sensor 1 = Frequency  1  conductivity, primary, 0350, 24-Mar-06, cpcor = -9.5700e-08
+# sensor 2 = Frequency  2  pressure, 0312/53580, 28-Feb-06
+# sensor 3 = Frequency  3  temperature, secondary, 2658, 26-May-06
+# sensor 4 = Frequency  4  conductivity, secondary, 2047, 24-Mar-06, cpcor = -9.5700e-08
+# sensor 5 = Extrnl Volt  0  transmissometer, primary, CST-830DR, 27-Jan-06
+# sensor 6 = Extrnl Volt  3  irradiance (PAR), primary, 4470, 5-Apr-06
+# sensor 7 = Extrnl Volt  4  WET Labs, ECO_AFL
+# sensor 8 = Extrnl Volt  6  Oxygen, SBE, primary, 0196, 8-Apr-06
+# sensor 9 = Extrnl Volt  7  Oxygen, SBE, secondary, 0181, 22-Feb-06
+# datcnv_date = Jun 17 2008 15:53:26, 7.15
+# datcnv_in = C:\Documents and Settings\Rich\My Documents\IANNUZZI\lter0701\g701018.dat C:\Documents and Settings\Rich\My Documents\IANNUZZI\lter0701\g701018.CON 
+# datcnv_bottle_scan_range_source = BL file
+# bottlesum_date = Jun 17 2008 16:15:48, 7.15
+# bottlesum_in = C:\Documents and Settings\Rich\My Documents\IANNUZZI\lter0701\g701018.ros C:\Documents and Settings\Rich\My Documents\IANNUZZI\lter0701\g701018.CON C:\Documents and Settings\Rich\My Documents\IANNUZZI\lter0701\g701018.BL
+    Bottle        Date      Sal00      Sal11  Sigma-é00  OxsatML/L       PrDM      T090C      T190C        Par      Xmiss  FlECO-AFL Sbeox0ML/L Sbeox1ML/L      DepSM      TimeJ
+  Position        Time                                                                                                                                                          
+      1    Jan 14 2007    20.6271    35.4623    13.8938    5.64471    212.920    19.7952     0.3516 9.9990e+03   109.5496    64.2070   42.75824  -39.87733    210.723  14.410813 (avg)
+              09:54:12                                                  0.000   108.4230     0.0000 0.0000e+00     0.0000     0.0000   51.34147   53.97137      0.000 0.0000e+00 (sdev)
+      2    Jan 14 2007     7.6145    35.4544   -21.0833    2.47309    212.920    82.2394     0.3516 9.9990e+03   109.5496    64.2070    6.32333   -0.58831    210.723  14.410815 (avg)
+              09:54:12                                                  0.000    28.9890     0.0000 0.0000e+00     0.0000     0.0000    1.83529    0.21842      0.000 0.0000e+00 (sdev)
+      3    Jan 14 2007    13.5347    35.4597     2.0239    4.15889    212.920    40.4246     0.3516 9.9990e+03   109.5496    64.2070   31.11715  -27.37054    210.723  14.410821 (avg)
+              09:54:12                                                  0.000    88.5682     0.0000 0.0000e+00     0.0000     0.0000   42.55772   44.89627      0.000 3.2641e-06 (sdev)

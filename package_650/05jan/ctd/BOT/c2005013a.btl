@@ -1,0 +1,48 @@
+* Sea-Bird SBE 9 Data File:
+* FileName = C:\Data\Raw\G501028.dat
+* Software Version Seasave Win32 V 5.31a
+* Temperature SN = 2637
+* Conductivity SN = 350
+* Number of Bytes Per Scan = 30
+* Number of Voltage Words = 4
+* Number of Scans Averaged by the Deck Unit = 1
+* System UpLoad Time = Jan 13 2005 09:08:56
+* NMEA Latitude = 64 47.89 S
+* NMEA Longitude = 064 07.62 W
+* NMEA UTC (Time) = 09:08:51
+* Store Lat/Lon Data = Add to Header Only
+** Ship:  Laurence M. Gould 
+** Cruise:  LMG0501 
+** Station:    620.040
+** Cast: 28
+** Event: 238
+# interval = seconds: 0.0416667                   
+# start_time = Jan 13 2005 09:08:56
+# sensor 0 = Frequency  0  temperature, primary, 2637, 29Jun04
+# sensor 1 = Frequency  1  conductivity, primary, 350, 29Jun04, cpcor = -9.5700e-08
+# sensor 2 = Frequency  2  pressure, 53580, 08Jul04
+# sensor 3 = Frequency  3  temperature, secondary, 2658, 29Jun04
+# sensor 4 = Frequency  4  conductivity, secondary, 0692, 04May04, cpcor = -9.5700e-08
+# sensor 5 = Extrnl Volt  0  fluorometer, chelsea, 088211, 12May04
+# sensor 6 = Extrnl Volt  2  Oxygen, SBE, primary, 0200, 28Apr04
+# sensor 7 = Extrnl Volt  3  Oxygen, SBE, secondary, 0201, 28Apr04
+# sensor 8 = Extrnl Volt  4  transmissometer, CST-407DR, 17May04
+# sensor 9 = Extrnl Volt  7  irradiance (PAR), 4561, 26May04
+# datcnv_date = Jun 22 2006 14:43:12, 4.249
+# datcnv_in = G501028.DAT G501028.CON
+# rossum_date = Jul 05 2006 11:45:14, 4.249
+# rossum_in = G501028.ROS G501028.CON G501028.BL
+    Bottle        Date      Sal00      Sal11  Sigma-é00  OxsatML/L         Pr       T090       T190        Par      Xmiss        FlC Sbeox0ML/L Sbeox1ML/L       DepS      TimeJ
+  Position        Time                                                                                                                                                          
+      1    Jan 13 2005    34.2180    34.2148    27.4333    7.93191     55.740     0.7390     0.7382 3.4780e+00    90.0592 2.3332e-01    5.64085    5.66557     55.187   13.38357 (avg)
+              09:12:18                                                  0.057     0.0002     0.0002 9.9119e-03     0.0210 1.5488e-03    0.00046    0.00332      0.057    0.00001 (sdev)
+      2    Jan 13 2005    34.0463    34.0543    27.3045    7.97429     39.481     0.5805     0.5920 7.7011e+00    88.9616 2.9098e-01    6.09135    6.06721     39.091   13.38486 (avg)
+              09:14:09                                                  0.022     0.0028     0.0097 5.9755e-03     0.0304 1.1012e-03    0.00938    0.01234      0.022    0.00001 (sdev)
+      3    Jan 13 2005    33.8781    33.8818    27.1941    8.07947     27.262     0.1277     0.1589 1.4801e+01    89.0431 2.9747e-01    6.44315    6.45669     26.993   13.38580 (avg)
+              09:15:30                                                  0.015     0.0050     0.0176 2.8111e-02     0.0199 2.9679e-03    0.00484    0.00375      0.014    0.00001 (sdev)
+      4    Jan 13 2005    33.5851    33.5962    26.9576    8.09544     11.433     0.1286     0.1064 3.4423e+01    88.9102 2.4995e-01    6.99177    7.04574     11.321   13.38686 (avg)
+              09:17:01                                                  0.041     0.0435     0.0572 1.3493e-01     0.0480 1.3143e-03    0.03560    0.03323      0.041    0.00001 (sdev)
+      5    Jan 13 2005    33.6162    33.6122    26.9817    8.08972      5.660     0.1473     0.1483 6.3199e+01    89.5038 2.4308e-01    7.36894    7.36066      5.605   13.38828 (avg)
+              09:19:05                                                  0.089     0.0023     0.0056 7.1372e-01     0.0460 3.2735e-03    0.00172    0.00363      0.088    0.00001 (sdev)
+      6    Jan 13 2005    33.6262    33.6209    26.9895    8.08833      2.376     0.1512     0.1535 1.0439e+02    89.8598 2.2083e-01    7.33152    7.31939      2.353   13.38873 (avg)
+              09:19:44                                                  0.101     0.0050     0.0021 5.2680e+00     0.0147 1.3787e-03    0.00316    0.00461      0.100    0.00001 (sdev)

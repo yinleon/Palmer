@@ -1,0 +1,25 @@
+20	! Event 151 Grid 600.040
+prDM: Pressure, Digiquartz [db]
+t090C: Temperature [ITS-90, deg C]
+t190C: Temperature, 2 [ITS-90, deg C]
+sbeox0V: Oxygen raw, SBE 43 [V]
+sbeox1V: Oxygen raw, SBE 43, 2 [V]
+flECO-AFL: Fluorescence, WET Labs ECO-AFL/FL [mg/m^3]
+par: PAR/Irradiance, Biospherical/Licor
+xmiss: Beam Transmission, Chelsea/Seatech [%]
+timeJ: Julian Days
+sal00: Salinity, Practical [PSU]
+sal11: Salinity, Practical, 2 [PSU]
+density00: Density [density, Kg/m^3]
+sigma-é00: Density [sigma-theta, Kg/m^3]
+depSM: Depth [salt water, m], lat = -64.9335
+potemp090C: Potential Temperature [ITS-90, deg C]
+sbeox0ML/L: Oxygen, SBE 43 [ml/l], WS = 2
+sbeox1ML/L: Oxygen, SBE 43, 2 [ml/l], WS = 2
+oxsolML/L: Oxygen Saturation, Garcia & Gordon [ml/l]
+nbin: number of scans per bin
+flag: flag
+      2.000     1.9156     1.9324     2.1653     4.1482     1.1331 4.2932e+00    89.8004  12.233216    32.8773    32.7511  1026.2869    26.2774      1.980     1.9155    6.62328   10.76703    7.73903         26 0.0000e+00
+      3.000     2.1094     2.1432     1.8205     3.9461     1.0617 3.2303e+00    90.1954  12.235609    32.8094    32.8758  1026.2229    26.2087      2.971     2.1093    5.53135    9.34663    7.70491         73 0.0000e+00
+      2.000     2.0792     2.0708     1.9043     3.6819     1.0267 3.8540e+00    90.1116  12.235595    32.8433    32.8617  1026.2475    26.2381      1.980     2.0791    5.90214    8.47762    7.70900         46 0.0000e+00
+      1.000     2.0745     2.0748     1.8818     3.4120     1.0399 5.3469e+00    90.3960  12.236149    32.8894    32.8614  1026.2801    26.2754      0.990     2.0744    5.62039    8.40793    7.70746         38 0.0000e+00

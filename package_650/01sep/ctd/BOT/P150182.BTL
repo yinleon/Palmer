@@ -1,0 +1,46 @@
+* Sea-Bird SBE 9 Raw Data File:
+* FileName = C:\DATA\RAW\P150182.DAT
+* Software Version 4.233
+* Temperature SN = 2186
+* Conductivity SN = 0926
+* Number of Bytes Per Scan = 30
+* Number of Voltage Words = 4
+* System UpLoad Time = Oct 06 2001 20:21:51
+* NMEA Latitude = 68 06.80 S
+* NMEA Longitude = 070 15.26 W
+* NMEA UTC (Time) = 20:21:50
+* Store Lat/Lon Data = Append to .NAV File When <Ctrl_N> is Pressed
+* Command Line = seasave 
+** Ship:   N. B. Palmer 
+** Cruise: NBP0105 
+** Station:   0182
+** Depth: -999        
+** no recent bottom depths
+** will take to the bottom
+** water fot tamara
+# interval = seconds: 0.0416667                   
+# start_time = Oct 06 2001 20:21:51
+# sensor 0 = Frequency  0  temperature, primary, 2186, 20-JUL-00
+# sensor 1 = Frequency  1  conductivity, primary, 0926, 19-SEP-00, cpcor = -9.5700e-08
+# sensor 2 = Frequency  2  pressure, 43528, 13-FEB-01
+# sensor 3 = Frequency  3  temperature, secondary, 2168, 20-AUG-99
+# sensor 4 = Frequency  4  conductivity, secondary, 2513, 20-SEP-00, cpcor = -9.5700e-08
+# sensor 5 = Extrnl Volt  0  oxygen, current, 0490, 14-SEP-00
+# sensor 6 = Extrnl Volt  1  oxygen, temperature, 0490, 14-SEP-00
+# sensor 7 = Extrnl Volt  2  irradiance (PAR), 4361, 06/27/01
+# sensor 8 = Extrnl Volt  4  fluorometer, chelsea, 088080, 16-JUL-01
+# sensor 9 = Extrnl Volt  6  transmissometer, 207D, 6/21/2001
+# datcnv_date = Sep 29 2003 11:52:21, 4.247
+# datcnv_in = P150182.DAT P150182.CON
+# rossum_date = Sep 29 2003 13:29:27, 4.247
+# rossum_in = P150182.ROS P150182.CON P150182.BL
+    Bottle        Date     OxML/L      Sal00      Sal11  Sigma-é00         Pr       T090       T190        FlC      Xmiss        Par      TimeJ        Nbf
+  Position        Time                                                                                                                                    
+      1    Oct 06 2001   18.26863    34.7152    34.7133    27.7930    506.151     1.3684     1.3681 3.2549e-02    90.3622 5.2071e-02  279.86174          1 (avg)
+              20:40:52                                                  0.030     0.0001     0.0001 3.9191e-03     0.0049 1.1547e-04    0.00001          0 (sdev)
+                                                                      506.029     1.3681     1.3679 2.7572e-02    90.3387 5.1977e-02  279.86173          1 (min)
+                                                                      506.221     1.3686     1.3684 3.9550e-02    90.3632 5.2417e-02  279.86176          1 (max)
+      2    Oct 06 2001   28.18501    33.8393    33.8364    27.2384     -0.032    -1.8492    -1.8507 3.8946e-02    89.7037 2.9762e+02  279.87811          2 (avg)
+              21:04:26                                                  0.344     0.0003     0.0006 1.3458e-03     0.6162 1.6341e+02    0.00001          0 (sdev)
+                                                                       -0.654    -1.8498    -1.8520 3.6478e-02    85.8132 1.4668e+02  279.87809          2 (min)
+                                                                        0.693    -1.8487    -1.8498 4.0769e-02    90.1430 5.3912e+02  279.87813          2 (max)

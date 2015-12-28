@@ -1,0 +1,75 @@
+* Sea-Bird SBE 9 Raw Data File:
+* FileName = C:\SEASOFT4.239\LMG00-01\CTD0016B.DAT
+* Software Version 4.239
+* Temperature SN = 2470
+* Conductivity SN = 2065
+* Number of Bytes Per Scan = 33
+* Number of Voltage Words = 5
+* Number of Scans Averaged by the Deck Unit = 1
+* System UpLoad Time = Jan 13 2000 10:07:55
+* NMEA Latitude = 64 51.63 S
+* NMEA Longitude = 067 41.64 W
+* NMEA UTC (Time) = 10:07:35
+* Store Lat/Lon Data = Append to .NAV File When <Ctrl_N> is Pressed
+* Command Line = seasave -l 
+** Ship: L M Gould 
+** Cruise: LMG00-01 LTER Jan 2000 
+** Event Number: 0239 
+** Grid Location: 500.160 
+** Latitude: 64 51.643 S
+** Longitude: 67 41.644 W
+** underwater PAR and altimeter back on package
+** 2nd cast,  1st aborted due to back boom block
+# interval = seconds: 0.0416667                   
+# start_time = Jan 13 2000 10:07:55
+# sensor 0 = Frequency  0  temperature, primary, 2470, 10-July-99
+# sensor 1 = Frequency  1  conductivity, primary, 2065, 09-Feb-99, cpcor = -9.5700e-08
+# sensor 2 = Frequency  2  pressure, 53952, 8 June 1999
+# sensor 3 = Frequency  3  temperature, secondary, 2637, 11-Feb-99
+# sensor 4 = Frequency  4  conductivity, secondary, 2250, 09-Feb-99, cpcor = -9.5700e-08
+# sensor 5 = Extrnl Volt  0  oxygen, current, 130373, 21-July-99
+# sensor 6 = Extrnl Volt  1  oxygen, temperature, 130373, 21-July-99
+# sensor 7 = Extrnl Volt  2  transmissometer, 199D, 11-Jan-00dwm
+# sensor 8 = Extrnl Volt  3  fluorometer, chelsea, 88093, 24-Jun-99
+# sensor 9 = Extrnl Volt  4  altimeter
+# sensor 10 = Extrnl Volt  7  irradiance (PAR), 4469, 21-Dec-99
+# sensor 11 = Extrnl Volt  9  surface irradiance (SPAR), degrees = 0.0
+# datcnv_date = Mar 04 2002 14:45:08, 4.247
+# datcnv_in = CTD0016B.DAT CTD0016B.CON
+# bottlesum_date = Dec 06 2013 18:52:56, 7.22.5
+# bottlesum_in = E:\iannuzzi\lter0001\CTD0016B.ROS E:\iannuzzi\lter0001\ctd0016b.con E:\iannuzzi\lter0001\CTD0016B.BL
+# bottlesum_ox_tau_correction = yes
+    Bottle        Date     OxML/L      Sal00      Sal11  Sigma-é00  OxsolML/L         Pr       T090       T190        FlC      TimeJ      Xmiss
+  Position        Time                                                                                                                         
+      9    Jan 13 2000    4.63494    34.7125    34.7138    27.7783    7.71647    302.701     1.5311     1.5308     0.0174  13.434376    90.9113 (avg)
+              10:25:28                                                             0.125     0.0002     0.0001     0.0019 1.0597e-05     0.0121 (sdev)
+     10    Jan 13 2000    4.56150    34.6621    34.6629    27.7381    7.72087    191.517     1.5223     1.5200     0.0194  13.436377    90.9519 (avg)
+              10:28:21                                                             0.124     0.0014     0.0017     0.0021 1.0579e-05     0.0248 (sdev)
+     11    Jan 13 2000    4.86316    34.5427    34.5447    27.6834    7.84659    151.081     0.9212     0.9026     0.0121  13.437273    90.8440 (avg)
+              10:29:38                                                             0.054     0.0046     0.0045     0.0014 1.0329e-05     0.0073 (sdev)
+     12    Jan 13 2000    7.29652    34.0780    34.0785    27.4088    8.29353     71.038    -1.0725    -1.0728     0.0810  13.439066    90.1992 (avg)
+              10:32:13                                                             0.200     0.0049     0.0047     0.0023 1.0666e-05     0.0251 (sdev)
+     13    Jan 13 2000    7.70009    33.9895    33.9948    27.3412    8.32500     61.200    -1.1909    -1.1921     0.0865  13.439991    90.0944 (avg)
+              10:33:33                                                             0.372     0.0062     0.0058     0.0013 1.0784e-05     0.0192 (sdev)
+     14    Jan 13 2000    7.74578    33.9829    33.9868    27.3359    8.32552     61.023    -1.1915    -1.1938     0.0848  13.440103    90.0492 (avg)
+              10:33:42                                                             0.125     0.0010     0.0020     0.0014 1.0396e-05     0.0222 (sdev)
+     15    Jan 13 2000    8.74060    33.8115    33.8110    27.1275    8.00016     37.300     0.3675     0.3930     0.3622  13.441229    85.5868 (avg)
+              10:35:20                                                             0.144     0.0151     0.0082     0.0044 1.0905e-05     0.0605 (sdev)
+     16    Jan 13 2000    8.76977    33.8119    33.8132    27.1270    7.99716     37.520     0.3819     0.3818     0.3338  13.441441    85.5547 (avg)
+              10:35:38                                                             0.072     0.0019     0.0017     0.0066 1.0639e-05     0.0302 (sdev)
+     17    Jan 13 2000    8.75009    33.7729    33.7739    27.0567    7.86630     29.536     1.0319     1.0318     0.4165  13.442355    82.3423 (avg)
+              10:36:57                                                             0.053     0.0003     0.0012     0.0039 1.0564e-05     0.0448 (sdev)
+     18    Jan 13 2000    8.75694    33.7733    33.7744    27.0571    7.86655     29.509     1.0305     1.0303     0.4088  13.442526    82.3509 (avg)
+              10:37:12                                                             0.069     0.0007     0.0003     0.0060 1.0586e-05     0.0425 (sdev)
+     19    Jan 13 2000    8.75000    33.7729    33.7740    27.0551    7.86131     12.148     1.0567     1.0556     0.3739  13.443627    82.1642 (avg)
+              10:38:47                                                             0.182     0.0040     0.0034     0.0080 1.0550e-05     0.0310 (sdev)
+     20    Jan 13 2000    8.75037    33.7731    33.7741    27.0556    7.86242     12.084     1.0511     1.0505     0.4029  13.443739    82.1918 (avg)
+              10:38:57                                                             0.105     0.0015     0.0022     0.0098 1.0768e-05     0.0449 (sdev)
+     21    Jan 13 2000    8.75104    33.7726    33.7738    27.0543    7.85949      6.810     1.0658     1.0658     0.3461  13.444185    82.1110 (avg)
+              10:39:35                                                             0.412     0.0022     0.0020     0.0076 1.0651e-05     0.0407 (sdev)
+     22    Jan 13 2000    8.75273    33.7727    33.7737    27.0543    7.85934      7.031     1.0665     1.0651     0.3358  13.444301    82.0989 (avg)
+              10:39:45                                                             0.156     0.0019     0.0025     0.0048 1.0921e-05     0.0309 (sdev)
+     23    Jan 13 2000    8.77290    33.7727    33.7739    27.0543    7.85927      3.179     1.0669     1.0663     0.3425  13.444851    82.1421 (avg)
+              10:40:33                                                             0.177     0.0010     0.0007     0.0098 1.0651e-05     0.0287 (sdev)
+     24    Jan 13 2000    8.77764    33.7730    33.7740    27.0552    7.86115      3.608     1.0575     1.0597     0.3350  13.445010    82.1727 (avg)
+              10:40:46                                                             0.162     0.0054     0.0041     0.0048 1.0851e-05     0.0279 (sdev)
